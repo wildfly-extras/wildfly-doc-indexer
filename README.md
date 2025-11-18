@@ -87,7 +87,3 @@ The indexer produces a JSON file containing an array of document objects. Each o
 ]
 ```
 
-This index format is optimized for client-side search libraries like FlexSearch, enabling:
-- **Fast text searching** across all documentation
-- **Title and content matching** with relevance scoring
-- **Minimal bandwidth usage** through efficient JSON structure
