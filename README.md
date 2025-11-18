@@ -4,7 +4,7 @@ The WildFly Documentation Indexer is a Maven-based tool designed to extract sear
 
 ## Prerequisites
 
-- **Java 21 or higher**
+- **Java 17 or higher**
 - **Apache Maven 3.9.0 or higher**
 - **WildFly documentation HTML files** (generated from .adoc sources)
 
