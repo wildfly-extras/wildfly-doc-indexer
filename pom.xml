@@ -53,6 +53,11 @@
         <jsoup.version>1.21.2</jsoup.version>
         <junit.version>6.0.0</junit.version>
         <picocli.version>4.7.7</picocli.version>
+
+        <!-- Nexus deployment settings -->
+        <nexus.repository.staging>wildfly-extras-staging</nexus.repository.staging>
+        <nexus.staging.tag>wildfly-doc-indexer-${project.version}</nexus.staging.tag>
+        <nexus.repository.release>wildfly-extras</nexus.repository.release>
     </properties>
 
 
