@@ -45,6 +45,9 @@ public class Indexer implements Callable<Integer> {
     @Option(names = "--exclude-dirs", split = ",", description = "Directory names that if found will be skipped", defaultValue = "downloads,feature-pack,images")
     private Path[] excludeDirs;
 
+    @Option(names = "--context-path", description = "Context path of the published documentation", defaultValue = "")
+    private String contextPath;
+
     @Override
     public Integer call() throws Exception {
         for (Path rootDir : scanDirs) {
@@ -189,7 +192,7 @@ public class Indexer implements Callable<Integer> {
             SectionKey key = entry.getKey();
             List<String> paragraphs = entry.getValue();
 
-            String fullUrl = key.url() + key.href();
+            String fullUrl = (contextPath != null ? contextPath : "") + key.url() + key.href();
             String content = String.join(" ", paragraphs);
 
             entries.add(new IndexEntry(key.title(), fullUrl, content));

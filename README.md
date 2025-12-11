@@ -46,19 +46,24 @@ java -jar ./target/wildfly-doc-indexer-1.0-SNAPSHOT.jar \
 ### Command Line Arguments
 ```bash
 $ java -jar ./target/wildfly-doc-indexer-1.0-SNAPSHOT.jar --help 
-Usage: indexer [-hV] [--output-file-path=<outputFile>] --work-dir=<workDir>
-               [--exclude-dirs=<excludeDirs>[,<excludeDirs>...]]...
-               [--scan-dirs=<rootDirs>[,<rootDirs>...]]...
+Usage: indexer [-hV] [--context-path=<contextPath>] --doc-base-dir=<docBaseDir>
+               [--output-file-path=<outputFile>] [--exclude-dirs=<excludeDirs>[,
+               <excludeDirs>...]]... [--scan-dirs=<scanDirs>[,<scanDirs>...]]...
 Create an index with the WildFly Documentation.
+      --context-path=<contextPath>
+                  Context path of the published documentation
+      --doc-base-dir=<docBaseDir>
+                  Path of the WildFly Documentation directory
       --exclude-dirs=<excludeDirs>[,<excludeDirs>...]
-                             Directory names that if found will be skipped
-  -h, --help                 Show this help message and exit.
+                  Directory names that if found will be skipped
+  -h, --help      Show this help message and exit.
       --output-file-path=<outputFile>
-                             Path of generated index.
-      --scan-dirs=<rootDirs>[,<rootDirs>...]
-                             Documentation directories that will be scanned
-  -V, --version              Print version information and exit.
-      --work-dir=<workDir>   Path of the WildFly Documentation directory
+                  Path of generated index.
+      --scan-dirs=<scanDirs>[,<scanDirs>...]
+                  Comma separated list of the directory names relative to
+                    --doc-base-dir that will be scanned to find html files to
+                    be processed
+  -V, --version   Print version information and exit.
 ```
 
 ### How It Works
